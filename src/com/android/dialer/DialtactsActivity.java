@@ -1265,6 +1265,17 @@ public class DialtactsActivity extends TransactionSafeActivity implements View.O
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mSlideIn != null) {
+            mSlideIn.setAnimationListener(null);
+        }
+        if (mSlideOut != null) {
+            mSlideOut.setAnimationListener(null);
+        }
+    }
+
+    @Override
     public void onDialpadQueryChanged(String query) {
         mDialpadQuery = query;
         if (mSmartDialSearchFragment != null) {
