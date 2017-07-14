@@ -1078,12 +1078,13 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
 
             boolean hidePreview = shallHidePreview(isConf, videoState);
             Log.v(this, "showVideoUi, hidePreview = " + hidePreview);
-            if (hidePreview) {
-                ui.showOutgoingVideoView(!hidePreview);
-            }
+            ui.showOutgoingVideoView(!hidePreview &&
+                    mPictureModeHelper.canShowPreviewVideoView());
 
             if (showOutgoingVideo) {
-                setPreviewSize(mDeviceOrientation, mPreviewAspectRatio);
+                if ((SystemProperties.getInt(PROP_DISABLE_VIDEOCALL_PIP_MODE, 0) == 1)) {
+                    setPreviewSize(mDeviceOrientation, mPreviewAspectRatio);
+                }
                 maybeLoadPreConfiguredImageAsync();
             }
 
@@ -1262,6 +1263,37 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
         }
     }
 
+    private boolean isLandscapeOrientation(final int orientation) {
+        return (orientation == InCallOrientationEventListener.SCREEN_ORIENTATION_90 ||
+                orientation == InCallOrientationEventListener.SCREEN_ORIENTATION_270);
+    }
+
+    public void setPreviewSurfaceSize(int width, int height) {
+        VideoCallUi ui = getUi();
+        if (ui == null) {
+            return;
+        }
+
+        final int orientation = mDeviceOrientation;
+        Log.d(this, "setPreviewSurfaceSize orientation: " + orientation +
+                " width = " + width + " height = " + height);
+
+        final boolean isPortrait = width < height;
+        int w = width;
+        int h = height;
+
+        if ((isLandscapeOrientation(orientation) && !isPortrait) ||
+                !isLandscapeOrientation(orientation) && isPortrait) {
+            /* preview video needs to be displayed in landscape window so set
+               portrait preview surface size and vice-versa */
+            width = h;
+            height = w;
+        }
+
+        Log.d(this, "setPreviewSurfaceSize final width: " + width + " final height: " + height);
+        ui.setPreviewSurfaceSize(width, height);
+    }
+
     /**
      * Changes the dimensions of the preview surface.
      *
@@ -1274,9 +1306,6 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
             return;
         }
 
-        // Resize the surface used to display the preview video
-        ui.setPreviewSurfaceSize(width, height);
-
         // Configure the preview surface to the correct aspect ratio.
         float aspectRatio = 1.0f;
         if (width > 0 && height > 0) {
@@ -1288,6 +1317,9 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
         // Resize the textureview housing the preview video and rotate it appropriately based on
         // the device orientation
         setPreviewSize(mDeviceOrientation, mPreviewAspectRatio);
+
+        // Resize the surface used to display the preview video
+        setPreviewSurfaceSize(width, height);
     }
 
     /**
