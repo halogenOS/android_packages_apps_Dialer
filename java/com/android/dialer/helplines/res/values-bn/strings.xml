@@ -15,5 +15,4 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="helplines_help_more_message">হেল্পলাইন এর লিস্টটির তথ্যগুলো বিভিন্ন অবদানকারী হতে ম্যানুয়ালি আপডেট করা হয়। আপনি যদি কোনো ভুল তথ্য খুজে পান, তাহলে আমাদের সাথে যোগাযোগ করতে পারেন। ঠিকানা: <xliff:g id="helplines_contact_url" example="www.lineageos.org">%1$s</xliff:g></string>
 </resources>

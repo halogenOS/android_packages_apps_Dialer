@@ -15,26 +15,4 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="helplines_name">ცხელი ხაზი</string>
-    <string name="helplines_loading">იტვირთება\u2026</string>
-    <string name="helplines_empty">ცხელი ხაზები არ მოიძებნა.\nჩადეთ SIM-ბარათი და კვლავ სცადეთ</string>
-    <string name="helplines_help">დახმარება</string>
-    <string name="helplines_help_title">უსაფრთხოა დასარეკად</string>
-    <string name="helplines_help_message">არცერთი ეს ნომერი არ გამოჩნდება ზარების ისტორიაში\nშეგიძლიათ დაწკაპოთ თითოეულზე ვრცლად გასაცნობად</string>
-    <string name="helplines_help_more_message">ცხელი ხაზების შესახებ მონაცემები გროვდება მოხალისეების დახმარებით. თუ წააწყდით არასრულ ან არასწორ ინფორმაციას, გთხოვთ, შეგვეხმიანოთ მისამართზე <xliff:g id="helplines_contact_url" example="www.lineageos.org">%1$s</xliff:g></string>
-    <string name="helpline_button_more">სხვა</string>
-    <string name="unknown_helpline_name">უცნობი დაწესებულება</string>
-    <string name="helpline_name">სახელი</string>
-    <string name="helpline_org">დაწესებულება</string>
-    <string name="helpline_categories">ჯგუფები</string>
-    <string name="helpline_number">ნომერი</string>
-    <string name="helpline_website">ვებსაიტი</string>
-    <string name="helpline_name_format_country"><xliff:g id="helpline_name" example="Emotional Support Helpline">%1$s</xliff:g> (<xliff:g id="helpline_county" example="US">%2$s</xliff:g>)</string>
-    <string name="helpline_language_cree">კრი</string>
-    <string name="helpline_language_english">ინგლისური</string>
-    <string name="helpline_language_french">ფრანგული</string>
-    <string name="helpline_language_german">გერმანული</string>
-    <string name="helpline_language_inuktitut">ინუკტიტუტი</string>
-    <string name="helpline_language_ojibway">ოჯიბვე</string>
-    <string name="helpline_language_turkish">თურქული</string>
 </resources>

@@ -15,17 +15,4 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="helplines_help">Tallelt</string>
-    <string name="helpline_button_more">Ugar</string>
-    <string name="helpline_name">Isem</string>
-    <string name="helpline_org">Tuddsa</string>
-    <string name="helpline_categories">Taggayin</string>
-    <string name="helpline_number">Uṭṭun</string>
-    <string name="helpline_website">Asmel Web</string>
-    <string name="helpline_language_cree">Takrikt</string>
-    <string name="helpline_language_english">Tagnizit</string>
-    <string name="helpline_language_french">Tafṛansist</string>
-    <string name="helpline_language_german">Talmanit</string>
-    <string name="helpline_language_inuktitut">Tinuktitut</string>
-    <string name="helpline_language_turkish">Taṭurkit</string>
 </resources>
