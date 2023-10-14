@@ -78,8 +78,9 @@
   <uses-permission android:name="android.permission.STOP_APP_SWITCHES"/>
 
   <!-- Used for sending PendingIntents to dynamically registered receivers -->
-  <uses-permission android:name="com.android.dialer.permission.DIALER_ORIGIN"
+  <permission android:name="com.android.dialer.permission.DIALER_ORIGIN"
     android:protectionLevel="signature" />
+  <uses-permission android:name="com.android.dialer.permission.DIALER_ORIGIN"/>
 
   <!-- Permissions needed for badger count showing on launch icon. -->
 
@@ -115,12 +116,14 @@
 
   <application
     android:hardwareAccelerated="true"
-    android:icon="@mipmap/ic_launcher_phone"
+    android:icon="@mipmap/ic_launcher"
     android:label="@string/applicationLabel"
     android:name="com.android.dialer.binary.aosp.AospDialerApplication"
+    android:appCategory="social"
     android:supportsRtl="true"
     android:usesCleartextTraffic="false"
-    android:extractNativeLibs="false">
+    android:extractNativeLibs="false"
+    android:requestLegacyExternalStorage="true">
   </application>
 
 </manifest>
