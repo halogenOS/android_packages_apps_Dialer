@@ -296,6 +296,10 @@ public class DialerDatabaseHelper extends SQLiteOpenHelper {
       return;
     }
 
+    if (oldVersion == 11) {
+      oldVersion = 10;
+    }
+
     if (oldVersion == 70011) {
       oldVersion = 10;
     }
