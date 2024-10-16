@@ -343,8 +343,17 @@ android_app {
     product_specific: true,
     required: [
         "privapp_whitelist_com.android.dialer",
+        "com.android.dialer_privapp_allowlist",
     ],
     uses_libs: ["org.apache.http.legacy"],
+}
+
+prebuilt_etc {
+    name: "com.android.dialer_privapp_allowlist",
+    product_specific: true,
+    sub_dir: "permissions",
+    src: "permissions_com.android.dialer-ext.xml",
+    filename_from_src: true,
 }
 
 java_library_host {
