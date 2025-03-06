@@ -102,7 +102,7 @@ public final class SearchContactViewHolder extends ViewHolder implements OnClick
         TextUtils.isEmpty(label)
             ? number
             : context.getString(
-                com.android.dialer.contacts.resources.R.string.call_subject_type_and_number,
+                com.android.dialer.R.string.call_subject_type_and_number,
                 label,
                 number);
 
@@ -172,7 +172,7 @@ public final class SearchContactViewHolder extends ViewHolder implements OnClick
       case CallToAction.SHARE_AND_CALL:
         callToActionView.setVisibility(View.VISIBLE);
         callToActionView.setImageDrawable(
-            context.getDrawable(com.android.dialer.contacts.resources.R.drawable.ic_phone_attach));
+            context.getDrawable(com.android.dialer.R.drawable.ic_phone_attach));
         callToActionView.setContentDescription(
             context.getString(R.string.description_search_call_and_share));
         callToActionView.setOnClickListener(this);

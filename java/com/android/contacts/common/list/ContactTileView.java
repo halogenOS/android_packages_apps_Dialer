@@ -28,7 +28,7 @@ import com.android.dialer.callintent.CallSpecificAppData;
 import com.android.dialer.common.LogUtil;
 import com.android.dialer.contactphoto.ContactPhotoManager;
 import com.android.dialer.contactphoto.ContactPhotoManager.DefaultImageRequest;
-import com.android.dialer.contacts.resources.R;
+import com.android.dialer.R;
 import com.android.dialer.widget.BidiTextView;
 
 /** A ContactTile displays a contact's picture and name */
