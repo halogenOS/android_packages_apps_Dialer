@@ -28,7 +28,7 @@ import android.os.Bundle;
 import android.provider.CallLog.Calls;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
-import com.android.dialer.app.R;
+import com.android.dialer.R;
 import com.android.dialer.common.Assert;
 import com.android.dialer.common.concurrent.DialerExecutor;
 import com.android.dialer.common.concurrent.DialerExecutor.Worker;
@@ -101,6 +101,7 @@ public class ClearCallLogDialog extends DialogFragment {
     @Override
     public Void doInBackground(@Nullable Void unused) throws Throwable {
       appContext.getContentResolver().delete(Calls.CONTENT_URI, null, null);
+      appContext.getContentResolver().notifyChange(Calls.CONTENT_URI, null);
       CachedNumberLookupService cachedNumberLookupService =
           PhoneNumberCache.get(appContext).getCachedNumberLookupService();
       if (cachedNumberLookupService != null) {

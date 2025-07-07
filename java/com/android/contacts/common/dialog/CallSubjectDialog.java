@@ -46,7 +46,7 @@ import com.android.dialer.callintent.CallInitiationType;
 import com.android.dialer.callintent.CallIntentBuilder;
 import com.android.dialer.common.LogUtil;
 import com.android.dialer.contactphoto.ContactPhotoManager;
-import com.android.dialer.contacts.resources.R;
+import com.android.dialer.R;
 import com.android.dialer.lettertile.LetterTileDrawable;
 import com.android.dialer.precall.PreCall;
 import com.android.dialer.util.ViewUtil;
