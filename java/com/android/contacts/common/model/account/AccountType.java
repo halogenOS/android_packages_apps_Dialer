@@ -30,7 +30,7 @@ import android.util.ArrayMap;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import com.android.contacts.common.model.dataitem.DataKind;
-import com.android.dialer.contacts.resources.R;
+import com.android.dialer.R;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collections;

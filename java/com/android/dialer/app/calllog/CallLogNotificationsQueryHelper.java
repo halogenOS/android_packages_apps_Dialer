@@ -33,7 +33,7 @@ import android.support.annotation.WorkerThread;
 import android.support.v4.os.UserManagerCompat;
 import android.telephony.PhoneNumberUtils;
 import android.text.TextUtils;
-import com.android.dialer.app.R;
+import com.android.dialer.R;
 import com.android.dialer.calllogutils.PhoneNumberDisplayUtil;
 import com.android.dialer.common.LogUtil;
 import com.android.dialer.common.database.Selection;

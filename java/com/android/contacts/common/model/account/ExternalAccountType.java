@@ -33,7 +33,7 @@ import android.util.AttributeSet;
 import android.util.Xml;
 import com.android.contacts.common.model.dataitem.DataKind;
 import com.android.dialer.common.LogUtil;
-import com.android.dialer.contacts.resources.R;
+import com.android.dialer.R;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

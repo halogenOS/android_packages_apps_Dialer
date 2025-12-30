@@ -55,6 +55,8 @@ EXTRA_PACKAGE_FLAGS = [
     "--extra-packages com.android.dialer.calllog.ui",
     "--extra-packages com.android.dialer.calllog.ui.menu",
     "--extra-packages com.android.dialer.calllogutils",
+    "--extra-packages com.android.dialer.callrecord",
+    "--extra-packages com.android.dialer.callstats",
     "--extra-packages com.android.dialer.clipboard",
     "--extra-packages com.android.dialer.commandline",
     "--extra-packages com.android.dialer.common",
@@ -172,6 +174,8 @@ RES_DIRS = [
     "java/com/android/dialer/calllog/ui/menu/res",
     "java/com/android/dialer/calllog/ui/res",
     "java/com/android/dialer/calllogutils/res",
+    "java/com/android/dialer/callrecord/res",
+    "java/com/android/dialer/callstats/res",
     "java/com/android/dialer/clipboard/res",
     "java/com/android/dialer/common/preference/res",
     "java/com/android/dialer/common/res",
@@ -339,8 +343,17 @@ android_app {
     product_specific: true,
     required: [
         "privapp_whitelist_com.android.dialer",
+        "com.android.dialer_privapp_allowlist",
     ],
     uses_libs: ["org.apache.http.legacy"],
+}
+
+prebuilt_etc {
+    name: "com.android.dialer_privapp_allowlist",
+    product_specific: true,
+    sub_dir: "permissions",
+    src: "permissions_com.android.dialer-ext.xml",
+    filename_from_src: true,
 }
 
 java_library_host {
